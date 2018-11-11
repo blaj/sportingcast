@@ -1,0 +1,28 @@
+<div class="slider">
+    <div class="match_day">
+        <div class="name">Real Madryt - FC Barcelona</div>
+        <div class="desc">23.10.2015 14:30</div>
+    </div>
+    <div class="watch">
+        <a href="#">Kliknij tutaj aby oglądać</a>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<div class="streams">
+    <ul>
+        <?php foreach ($data as $item): ?>
+            <li>
+                <a href="?a=match&id=<?=$item->id?>">
+                    <div class="symbol">&rsaquo;</div>
+                    <div class="title"><?=$item->title?></div>
+                    <div class="canal"><?=$item->canal?></div>
+                    <div class="date"><?=date('d/m/Y, H:i', strtotime($item->date))?></div>
+
+                    <div class="clear"></div>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

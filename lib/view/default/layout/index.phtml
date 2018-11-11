@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><?php echo htmlspecialchars(implode(' :: ', array_reverse($_config['title']))); ?></title>
+
+    <link href="<?php echo htmlspecialchars(implode(array_reverse($_config['path']))); ?>/lib/view/default/layout/css/style.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+<div class="nav-wrapper">
+    <div class="nav">
+        <div class="logo">
+            <a href="<?php echo htmlspecialchars(implode(array_reverse($_config['path']))); ?>"><span style="color: #5ca801;">Sporting</span>Cast.pl</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="<?php echo htmlspecialchars(implode(array_reverse($_config['path']))); ?>">Strona główna</a></li>
+                <li><a href="?a=terms">Regulamin</a></li>
+                <li><a href="?a=contact">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="content">
+        <?php
+        echo $main;
+        ?>
+    </div>
+
+    <div class="footer">
+        Strona prezentuje jedynie linki znalezione w sieci. Nadawca potwierdził legalność swojej transmisji na stronie dostawcy streamingu.
+        <br />
+        Administratorzy strony sportingcast.pl nie mają uprawnień ani możliwości weryfikacji legalności nadawanych materiałów.
+    </div>
+</div>
+</body>
+</html>
